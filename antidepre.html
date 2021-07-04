@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antidepre</title>
+</head>
+<body>
+    <h1>VOCÊ ESTÁ SE SENTINDO INCAPAZ?</h1>
+    <h2>Preencha com <strong>SIM</strong> ou <strong>NÃO</strong></h2>
+    <input type="text" name="txt" id="txt">
+    <input type="button" value="OK"onclick = "analisar()">
+     <div id = "ajudante">
+
+     </div>
+
+
+    <script>
+     function analisar(){
+      var sn = document.querySelector('input#txt');
+      var aju =document.querySelector('div#ajudante');
+      var anali = String(sn.value) ;
+      aju.innerHTML = `<p>Vi Que sua Resposta Foi ${anali}</p><br>`
+       if (anali == "sim"){
+           aju.innerHTML += `<p>Jamais</p><p>Esqueça que</p>Sua promessa foi um dia determinada e</p>         
+         <p>Um dia todas suas tribulações</p><p>Serão nada comparado a sua vitória!`                 
+        
+         }else if(anali == "não"){
+          aju.innerHTML += `Que bom que disse ${anali}!!!!!!!!!!`      
+   }else{
+       aju.innerHTML += `Digite sim ou não `
+   }
+    
+    }
+
+
+    </script>
+
+</body>
+</html>
